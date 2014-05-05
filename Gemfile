@@ -32,6 +32,28 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Generate sample data
+
+gem 'faker'
+
+# Install RSpec
+ group :development, :test do
+   gem 'rspec-rails'
+   gem "factory_girl_rails", "~> 4.0"
+  end
+
+# Install Devise for authentication
+
+gem 'devise'
+
+# To address strong parameters
+
+gem 'protected_attributes'
+
+# Bootstrap
+
+gem 'bootstrap-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
