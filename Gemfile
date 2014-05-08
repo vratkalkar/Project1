@@ -46,6 +46,10 @@ gem 'faker'
 
 gem 'devise'
 
+# Install redcarpet for Markdown
+
+gem 'redcarpet'
+
 # To address strong parameters
 
 gem 'protected_attributes'
