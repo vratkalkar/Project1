@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
 
   def create
-    @topic= Topic.new
+    @topic= Topic.new(params[:topic])
 
     if @topic.save
       flash[:notice] = "Topic was saved successfully."
@@ -22,7 +22,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
 
-    if @topic.update
+    if @topic.update_attributes(params[:topic])
       redirect_to @topic, notice: 'Topic was successfully updated.'
     else
       flash[:error] = "Error saving topic. Please try again"
@@ -48,6 +48,7 @@ class TopicsController < ApplicationController
   end
 
   def index
+    @topics = Topic.all
   end
   
 end
