@@ -1,12 +1,11 @@
 class ArticlesController < ApplicationController
 
   def create
-    @topic = Topic.find(params[:topic_id])
     @article = Article.new(article_params)
 
     if @article.save
       flash[:notice] = "Article was saved successfully."
-      redirect_to topic_article_url(@topic, @article)
+      redirect_to @article
     else
       flash[:error] = "Error creating article. Please try again."
       render :new
@@ -14,7 +13,6 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @topic = Topic.find(params[:topic_id])
     @article = Article.new
   end
 
@@ -52,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @article = Article.all
+    @articles = Article.all
   end
 
   private
