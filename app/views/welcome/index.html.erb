@@ -4,9 +4,21 @@
 <h1>Post/Rank</h1>
 <h4>Post and collaborate on wiki's</h4>
 <p>
-  <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary btn-large' %>
   <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-large' %>
 </p>
+</div>
+
+<div class="SignIn">
+  <%= link_to "Sign In", new_user_session_path, class: 'btn btn-warning btn-large' %>
+</br>
+</br>
+  <%= link_to "Topics", topics_path, class: 'btn btn-warning btn-large' %>
+</br>
+</br>
+  <%= link_to "Sign Out", destroy_user_session_path,:method => :delete, class: 'btn btn-warning'%>
+</br>
+</br>
+  
 </div>
 
 <div class="row">

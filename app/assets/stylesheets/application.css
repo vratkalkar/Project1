@@ -12,3 +12,30 @@
  *= require bootstrap
  *= require_tree .
  */
+
+ form {
+  margin-left: 650px;
+  margin-top : 180px;
+ }
+
+ h1 {
+  text-align: center;
+ }
+
+ h3 {
+  text-align: center;
+ }
+
+ a {
+  margin-left: 650px;
+ }
+
+ .btn,
+ .btn-large,
+ .btn-danger {
+  margin-top: -300px;
+ }
+
+ label {
+  color:white;
+ }

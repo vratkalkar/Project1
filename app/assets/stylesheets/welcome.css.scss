@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: beige;
+  background-color: #191919;
 }
 
 .jumbotron {
@@ -17,4 +17,38 @@ body {
 
 .col-md-4 {
   margin-left: 150px;
+}
+
+a,
+.btn,
+.btn-primary,
+.btn-large {
+   text-align:center;
+   margin-right: 680px;
+   margin-top: 40px;
+}
+
+.SignIn{
+  margin-left: 710px;
+  margin-top: -300px;
+
+  position: absolute;
+}
+
+h1 {
+  color:white;
+}
+
+h2 {
+  color:white;
+}
+
+p {
+  color:white;
+}
+
+
+.btn-warning,
+ {
+  margin-top: -60px;
 }

@@ -3,8 +3,9 @@ class ArticlesController < ApplicationController
   def create
     @article= Article.new(params[:article])
 
-    if @topic.save
+    if @article.save
       flash[:notice] = "Article was saved successfully."
+      redirect_to @article
     else
       flash[:error] = "Error creating article. Please try again."
       render :new
@@ -45,7 +46,10 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles= Article.all
+    @article = Article.all
   end
 
+end
+end
+end
 end

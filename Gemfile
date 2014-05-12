@@ -67,6 +67,14 @@ gem 'protected_attributes'
 
 gem 'bootstrap-sass'
 
+# EpicEditor for Rails
+
+gem 'epiceditor', '~> 0.2.2'
+
+# Friendly ID for URL's
+
+gem 'friendly_id'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

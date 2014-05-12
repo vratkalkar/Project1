@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509132148) do
+ActiveRecord::Schema.define(version: 20140510164640) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -27,24 +27,11 @@ ActiveRecord::Schema.define(version: 20140509132148) do
   end
 
   create_table "topics", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-  add_index "topics", ["email"], name: "index_topics_on_email", unique: true
-  add_index "topics", ["reset_password_token"], name: "index_topics_on_reset_password_token", unique: true
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
@@ -59,11 +46,11 @@ ActiveRecord::Schema.define(version: 20140509132148) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "name"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "name"
   end
 
 end

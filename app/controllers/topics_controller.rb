@@ -1,12 +1,13 @@
 class TopicsController < ApplicationController
 
   def create
-    @topic= Topic.new(params[:topic])
+    @topic= Topic.new(topic_params)
 
     if @topic.save
       flash[:notice] = "Topic was saved successfully."
+      redirect_to @topic
     else
-      flash[:error] = "Error creating topic. Please try again."
+      flash[:notice] = "Error creating topic. Please try again."
       render :new
     end
   end
@@ -48,7 +49,15 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all
+    @topic = Topic.all
   end
   
 end
+
+private
+
+def topic_params
+  params.require(:topic).permit(
+    :name,
+    :description)
+ end
