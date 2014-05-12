@@ -1,16 +1,16 @@
 <h1>Create a Wiki </h1>
 
 <div class="col-md-8">
-     <%= form_for :article do |f| %>
+     <%= form_for [@topic, @article] do |f| %>
      <div class="form-group">
        <%= f.label :title %>
-       <%= f.text_field :title, class: 'form-control', placeholder: "Enter post name" %>
+       <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
       </div>
       <div class="media-body">
         <%= f.label :body %>
-        <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter post description" %>
+        <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki description" %>
       </div>
      <div>
-       <%= f.submit "Save", class: 'btn btn-success' %>
+       <%= f.submit "Save", class: 'btn btn-primary' %>
       <% end %>
     </div>

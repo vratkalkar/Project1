@@ -1,17 +1,20 @@
 class ArticlesController < ApplicationController
 
   def create
-    @article= Article.new(params[:article])
+    @topic = Topic.find(params[:topic_id])
+    @article = Article.new(article_params)
 
     if @article.save
       flash[:notice] = "Article was saved successfully."
-      redirect_to @article
+      redirect_to topic_article_url(@topic, @article)
     else
       flash[:error] = "Error creating article. Please try again."
       render :new
+    end
   end
 
   def new
+    @topic = Topic.find(params[:topic_id])
     @article = Article.new
   end
 
@@ -23,11 +26,13 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     if @article.update_attributes(params[:article])
-      redirect_to @article, notice: 'Topic was successfully updated.'
+      redirect_to @article, notice: 'Wiki was successfully updated.'
     else
-      flash[:error] = "Error saving article. Please try again"
+      flash[:notice] = "Error saving wiki. Please try again"
       render :edit
+    end
   end
+
 
   def destroy
     @article = Article.find(params[:id])
@@ -35,21 +40,24 @@ class ArticlesController < ApplicationController
 
     if @article.destroy
       flash[:notice] = "\"#{name}\" was deleted successfully."
-      redirect_to topics_articles_path
+      redirect_to @article
     else
       flash[:error] = "There was an error deleting the article."
       render :show
+    end
   end
 
   def show
-    @article = Article.find(params[:id])
+    @articles = Article.find(params[:id])
   end
 
   def index
     @article = Article.all
   end
 
-end
-end
-end
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end

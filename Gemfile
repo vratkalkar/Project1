@@ -75,6 +75,10 @@ gem 'epiceditor', '~> 0.2.2'
 
 gem 'friendly_id'
 
+# Stripe for payments
+
+gem 'stripe'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

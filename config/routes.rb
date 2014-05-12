@@ -12,7 +12,6 @@ Project1::Application.routes.draw do
 
   mount EpicEditor::Engine => "/"
 
-  post '/topics/:id/articles/new', to: 'articles#show'
 
   root to: 'welcome#index'
 

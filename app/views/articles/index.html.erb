@@ -1,0 +1,17 @@
+<h1>All Wiki's</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <% @article.each do |articles| %>
+     <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to articles.title, topic_articles_path %>
+        </h4>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to "View Topics", topics_path(@topic), class: 'btn btn-primary' %>
