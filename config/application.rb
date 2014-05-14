@@ -21,6 +21,8 @@ module Project1
     # config.i18n.default_locale = :de
 
 
+    config.serve_static_assets = true
+    
     I18n.enforce_available_locales = false
   end
 end
