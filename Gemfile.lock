@@ -53,8 +53,6 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    epiceditor (0.2.2.1)
-      rails (~> 4.0.0)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -170,7 +168,6 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
-  epiceditor (~> 0.2.2)
   factory_girl_rails (~> 4.0)
   faker
   figaro
