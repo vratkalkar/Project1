@@ -67,22 +67,21 @@ gem 'protected_attributes'
 
 gem 'bootstrap-sass'
 
-# EpicEditor for Rails
-
-gem 'epiceditor', '~> 0.2.2'
-
 # Friendly ID for URL's
 
 gem 'friendly_id'
 
 # Stripe for payments
 
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Will Paginate for pagination
 
 gem 'will_paginate', '~> 3.0'
 
+# Figaro for keys
+
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

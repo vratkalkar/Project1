@@ -1,14 +1,27 @@
 
 
-<h1><%= @articles.title %></h1>
+<h1><%= @article.title %></h1>
 
 <div class="row">
     <div class="col-md-8">
-      <p class="lead"><%= markdown @articles.body %></p>
+     <p><%= @article.body %></p>
  </div>
 </div>
+<%= link_to "Delete Article ", [@topic, @article], method: :delete, class: 'btn btn-danger' , confirm: "Are you sure you want to delete this topic?" %>
+<%= link_to "View Wiki's", topic_articles_path(@topic), class: 'btn btn-primary' %>
 
-<%= link_to "View Wiki's", articles_path(@articles), class: 'btn btn-primary' %>
+ <%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Download for $1</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_NtnxgYuRUzNcvNRMZGq6eYve"
+          data-description="Download One Wiki"
+          data-amount="100"></script>
+<% end %>
 
 
 

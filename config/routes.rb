@@ -4,15 +4,13 @@ Project1::Application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :topics 
+  resources :topics do
+   resources :articles
+  end
+    resources :charges
+   resources :comments
 
-  resources :articles
-
-
-  resources :comments
-
-  mount EpicEditor::Engine => "/"
-
+  
   root to: 'welcome#index'
 
 end
