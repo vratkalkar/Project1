@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     @article.topic = @topic
     if @article.save
       flash[:notice] = "Article was saved successfully."
-      redirect_to topic_articles_path
+      redirect_to topic_url(@topic)
     else
       flash[:error] = "Error creating article. Please try again."
       render :new
