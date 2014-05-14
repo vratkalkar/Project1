@@ -14,7 +14,7 @@
     <div class="col-md-8">
       <div class="">
           <% @topic.articles.each do |article| %>
-            <p><%= link_to article.title, topic_article_url(@topic, article) %></p>
+            <h3><%= link_to article.title, topic_article_url(@topic, article) %></h3>
           <% end %>
         </div>
     </div>
