@@ -181,7 +181,7 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 1.2)
   jquery-rails
-  pg
+  pg (= 0.17.1)
   protected_attributes
   rails (= 4.0.2)
   rails_12factor
