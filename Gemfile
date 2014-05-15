@@ -89,6 +89,7 @@ gem 'figaro'
 
 gem 'doc_raptor'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
