@@ -9,6 +9,9 @@
 </div>
 <%= link_to "Delete Article ", [@topic, @article], method: :delete, class: 'btn btn-danger' , confirm: "Are you sure you want to delete this topic?" %>
 <%= link_to "View Wiki's", topic_articles_path(@topic), class: 'btn btn-primary' %>
+<%= link_to "Get listing as PDF file", topic_article_path(:format => "pdf") %>
+
+
 
  <%= form_tag charges_path do %>
   <article>

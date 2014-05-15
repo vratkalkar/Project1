@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>PDF Example</title>
+  </head>
+  <body>
+    <h1>Listing Examples</h1>
+    <table width="100%">
+      <tr style="font-weight:bold;">
+        <td>Document Name</td>
+        <td>Document Type</td>
+        <td>Test Mode</td>
+      </tr>
+      <% @articles.each do |article| %>
+        <tr>
+          <td>
+            <%= example.document_name %>
+          </td>
+          <td>
+            <%= example.document_type %>
+          </td>
+          <td>
+            <%= example.test %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

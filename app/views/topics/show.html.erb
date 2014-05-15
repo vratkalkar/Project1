@@ -1,9 +1,10 @@
 <h1><%= markdown @topic.name %></h1>
 
-
+<div id="topic-btn">
   <%= link_to "Edit Topic", edit_topic_path(@topic), class: 'btn btn-primary' %>
   <%= link_to "New Post", new_topic_article_path(@topic), class: 'btn btn-primary' %>
   <%= link_to "View Topics", topics_path(@topic), class: 'btn btn-primary' %>
+</div>
 
 
 
@@ -12,7 +13,7 @@
       <p class="lead"><%= markdown @topic.description %></p>
     </div>
     <div class="col-md-8">
-      <div class="">
+      <div id="topic-article">
           <% @topic.articles.each do |article| %>
             <h3><%= link_to article.title, topic_article_url(@topic, article) %></h3>
           <% end %>
