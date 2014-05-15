@@ -4,11 +4,13 @@
 
 body {
   background-color: #191919;
+  position: relative;
 }
 
 .jumbotron {
   background-color:white;
   position: relative;
+
 }
 
 .jumbotron, h2, p {
@@ -59,4 +61,5 @@ p {
  {
   margin-top: -180px;
   margin-left: 648px;
+  position:relative;
 }
