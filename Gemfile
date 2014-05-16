@@ -88,6 +88,10 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'doc_raptor'
 
+# SendGrid for emails
+
+gem 'sendgrid'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
