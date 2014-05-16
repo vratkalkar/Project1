@@ -92,4 +92,6 @@ Project1::Application.configure do
     password: ENV["SENDGRID_PASSWORD"],
 
   }
+ end
 end
+
