@@ -27,7 +27,7 @@ a,
 .btn-primary,
 .btn-large {
    text-align:center;
-   margin-right: 420px;
+   margin-right: 500px;
    margin-top: 40px;
 }
 
@@ -54,7 +54,12 @@ p {
 .btn,
 .btn-primary,
 .btn-large{
-  margin-left: 450px;
+  margin-left: 1px;
+}
+
+.btn,
+.btn-primary {
+  margin-right: -200px;
 }
 
 
