@@ -94,5 +94,4 @@ Project1::Application.configure do
 
   }
  end
-end
 
