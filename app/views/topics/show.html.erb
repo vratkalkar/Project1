@@ -1,12 +1,5 @@
 <h1><%= markdown @topic.name %></h1>
 
-<div class="topic-btn">
-  <%= link_to "Edit Topic", edit_topic_path(@topic), class: 'btn btn-primary' %>
-  <%= link_to "New Post", new_topic_article_path(@topic), class: 'btn btn-primary' %>
-  <%= link_to "View Topics", topics_path(@topic), class: 'btn btn-primary' %>
-</div>
-
-
 
   <div class="row">
     <div class="col-md-8">
@@ -20,3 +13,9 @@
         </div>
     </div>
   </div>
+
+<div class="topic-btn">
+  <%= link_to "Edit Topic", edit_topic_path(@topic), class: 'btn btn-primary' %>
+  <%= link_to "New Post", new_topic_article_path(@topic), class: 'btn btn-primary' %>
+  <%= link_to "View Topics", topics_path(@topic), class: 'btn btn-primary' %>
+</div>
