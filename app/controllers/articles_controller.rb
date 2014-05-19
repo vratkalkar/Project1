@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
   def update
@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
 
 
   def destroy
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     title = @article.title
     redirect_to topics_path
 
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
 
   def show
     @topic = Topic.find(params[:topic_id])
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
 
      respond_to do |format|
        format.html
