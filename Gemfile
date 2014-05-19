@@ -94,9 +94,10 @@ gem 'sendgrid'
 
 # Rails error messages 
 
-group :development do
-  gem "better_errors"
-end
+
+# PDF
+
+gem 'pdfcrowd'
 
 
 # Use ActiveModel has_secure_password

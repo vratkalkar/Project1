@@ -51,19 +51,39 @@ class ArticlesController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @article = Article.find(params[:id])
 
-    respond_to do |format|
-    format.html
-    format.pdf do
-      render :pdf => "filename", :stylesheets => ["application", "prince"], :layout => "pdf"
+     respond_to do |format|
+       format.html
+       format.pdf { doc_raptor_send }
     end
   end
+
+
+def doc_raptor_send(options = { })
+      default_options = {
+         :name => controller_name,
+         :document_type => request.format.to_sym,
+         :test => ! Rails.env.production?,
+  }
+
+     options = default_options.merge(options)
+     options[:document_content] ||= render_to_string
+     ext = options[:document_type].to_sym
+
+    response = DocRaptor.create(options)
+    if response.code == 200
+        send_data response, :filename => "#{options[:name]}.#{ext}", :type => ext
+    else
+      render :inline => response.body, :status => response.code
+  end
 end
+ 
 
 
   def index
     @topic = Topic.find(params[:topic_id])
     @articles = Article.all
 end
+
 
 
   private
