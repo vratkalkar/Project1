@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
 
   attr_accessible :body, :title
 
+  attr_accessor :slug
+
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
 end
