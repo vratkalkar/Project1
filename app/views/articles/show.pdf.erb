@@ -3,16 +3,11 @@
     <title>PDF Example</title>
   </head>
   <body>
-    <h1>Wiki</h1>
+    <h1><%= @article.title %></h1>
     <table width="100%">
       <tr style="font-weight:bold;">
-        <td>Title</td>
-        <td>Description</td>
       </tr>
         <tr>
-          <td>
-            <%= @article.title %>
-          </td>
           <td>
             <%= @article.body%>
           </td>

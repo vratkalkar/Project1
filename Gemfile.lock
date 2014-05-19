@@ -89,7 +89,6 @@ GEM
     multi_json (1.10.0)
     multi_xml (0.5.5)
     orm_adapter (0.5.0)
-    pdfcrowd (2.6.0)
     pg (0.17.1)
     polyglot (0.3.4)
     protected_attributes (1.0.7)
@@ -184,7 +183,6 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 1.2)
   jquery-rails
-  pdfcrowd
   pg (= 0.17.1)
   protected_attributes
   rails (= 4.0.2)

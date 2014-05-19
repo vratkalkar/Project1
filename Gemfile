@@ -92,14 +92,6 @@ gem 'doc_raptor'
 
 gem 'sendgrid'
 
-# Rails error messages 
-
-
-# PDF
-
-gem 'pdfcrowd'
-
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

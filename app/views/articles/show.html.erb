@@ -14,9 +14,10 @@
 
 
 
-<%= link_to "Delete Wiki", [@topic, @article], method: :delete, class: 'btn btn-danger' , confirm: "Are you sure you want to delete this topic?" %>
-<%= link_to "Edit Wiki", edit_topic_article_path(@topic,@article), class: 'btn btn-primary' %>
-<a href="//pdfcrowd.com/url_to_pdf/", class: 'btn btn-primary'>Save to PDF</a>
+<%= link_to "Delete Wiki", [@topic, @article], method: :delete, confirm: "Are you sure you want to delete this topic?" %>
+<%= link_to "Edit Wiki", edit_topic_article_path(@topic,@article) %>
+</br>
+<%= link_to 'Download as PDF', topic_article_path(:format => "pdf")%>
 
 
  <%= form_tag charges_path do %>
