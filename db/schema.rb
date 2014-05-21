@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520221614) do
+ActiveRecord::Schema.define(version: 20140521180930) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140520221614) do
     t.integer  "article_id"
     t.decimal  "payment"
     t.boolean  "paid"
-    t.integer  "user_id"
+    t.integer  "integer"
   end
 
   create_table "topics", force: true do |t|
