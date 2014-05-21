@@ -1,3 +1,5 @@
+
+
 <h1><%= markdown @topic.name %></h1>
 
 
@@ -15,7 +17,10 @@
   </div>
 
 <div class="topic-btn">
-  <%= link_to "Edit Topic", edit_topic_path(@topic), class: 'btn btn-primary' %>
-  <%= link_to "New Post", new_topic_article_path(@topic), class: 'btn btn-primary' %>
-  <%= link_to "View Topics", topics_path(@topic), class: 'btn btn-primary' %>
+  <%= link_to "Edit Topic", edit_topic_path(@topic) %>
+  <%= link_to "New Post", new_topic_article_path(@topic) %>
+  <%= link_to "View Topics", topics_path(@topic) %>
 </div>
+
+
+

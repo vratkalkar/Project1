@@ -1,6 +1,6 @@
 <h1> Edit Wiki </h1>
 <div class="col-md-8">
-    <%= form_for topic_article_path do |f| %>
+    <%= form_for [@topic, @article] do |f| %>
       <div class="form-group">
         <%= f.label :title %></br>
           <%= f.text_field :title, placeholder: "Enter title" %>

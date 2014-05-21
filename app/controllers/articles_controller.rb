@@ -52,8 +52,14 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:id])
 
      respond_to do |format|
-       format.html
-       format.pdf { doc_raptor_send }
+      format.html
+      format.pdf do 
+        if current_user.already_bought?(@article)
+          doc_raptor_send
+        else
+          redirect_to topic_article_url(@topic, @article, format: "html"), error: "You need to buy that first"
+        end
+      end
     end
   end
 
@@ -83,6 +89,8 @@ end
     @topic = Topic.find(params[:topic_id])
     @articles = Article.all
 end
+
+
 
 
 

@@ -7,4 +7,11 @@ class User < ActiveRecord::Base
  has_many :articles
  has_many :comments
 
+ has_many :payments
+
+
+ def already_bought?(article)
+  self.payment.where(:article_id).present?
+ end
+
 end
