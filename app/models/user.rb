@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
  has_many :payments
 
 
- def already_bought?(article)
-  self.payment.where(:article_id).present?
+ def already_purchased?(article)
+  self.payments.where(:article_id).present?
  end
 
 end

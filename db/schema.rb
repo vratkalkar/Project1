@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140521180930) do
+ActiveRecord::Schema.define(version: 20140521232456) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -45,13 +45,14 @@ ActiveRecord::Schema.define(version: 20140521180930) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "payments", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "user_id"
     t.integer  "article_id"
-    t.decimal  "payment"
     t.boolean  "paid"
-    t.integer  "integer"
+    t.datetime "created_at"
   end
+
+  add_index "payments", ["article_id"], name: "index_payments_on_article_id"
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id"
 
   create_table "topics", force: true do |t|
     t.string   "name"

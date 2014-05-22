@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
      respond_to do |format|
       format.html
       format.pdf do 
-        if current_user.already_bought?(@article)
+        if current_user.already_purchased?(@article)
           doc_raptor_send
         else
           redirect_to topic_article_url(@topic, @article, format: "html"), error: "You need to buy that first"

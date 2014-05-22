@@ -7,9 +7,8 @@ end
 
 def create
 
-  @user = current_user
+# amount in cents
 
-  # Amount in cents
   @amount = 100
 
 
@@ -23,12 +22,12 @@ def create
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => "PDF: @article.title ",
+    :description => "PDF Download",
     :currency    => 'usd'
   )
-   
-   
-       redirect_to topic_article_url(@article, format: "pdf")
+
+  #flash[:success] = "The payment was successful"
+  #redirect_to topic_article_url(@article, format: "pdf")
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
