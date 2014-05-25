@@ -1,3 +1,4 @@
+
 class ChargesController < ApplicationController
 
   before_action :authenticate_user!
@@ -26,13 +27,28 @@ def create
     :currency    => 'usd'
   )
 
-  #flash[:success] = "The payment was successful"
-  #redirect_to topic_article_url(@article, format: "pdf")
+ if charge
+  article = Article.friendly.find(params[:article_id])
+  payment = Payment.new(payment_param)
+  payment.user_id = current_user.id
+  payment.article_id = article.id
+  payment.save
+
+  redirect_to :back
+  flash[:notice]= "Thanks for your payment! A receipt has been sent to your email address."
+ end
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to charges_path
  end
+end
+
+
+private
+
+def payment_param
+   params.permit(:user_id, :article_id)
 end
 
 

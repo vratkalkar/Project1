@@ -21,6 +21,7 @@
 
 
  <%= form_tag charges_path do %>
+ <%= hidden_field_tag "article_id", params[:id]%>
   <article>
     <label class="amount">
       <span>Download for $1</span>
@@ -28,7 +29,7 @@
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_NtnxgYuRUzNcvNRMZGq6eYve"
+          data-key="pk_live_oD3J0NQcHFfEwIrvLoplgwlO"
           data-description="Download One Wiki"
           data-amount="100"></script>
 <% end %>
