@@ -57,7 +57,8 @@ class ArticlesController < ApplicationController
         if current_user.already_purchased?(@article)
           doc_raptor_send
         else
-          redirect_to topic_article_url(@topic, @article, format: "html"), error: "You need to buy that first"
+          redirect_to topic_article_url(@topic, @article, format: "html")
+          flash[:notice]="You need to buy that first"
         end
       end
     end
