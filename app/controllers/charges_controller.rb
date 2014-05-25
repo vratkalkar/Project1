@@ -13,7 +13,7 @@ def create
   @amount = 100
 
 
-  Stripe.api_key="sk_test_ZLKesvFv6Gl4jbQ6IPCUawml"
+  Stripe.api_key="sk_live_J3XCw0WAWOeEOQAeoUxEGihP"
 
   customer = Stripe::Customer.create(
     :email => current_user.email,
