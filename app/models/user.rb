@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
 
  def already_purchased?(article)
-  self.payments.where(:user_id).present?
+  self.payments.where(:article_id).present?
  end
 
 end
