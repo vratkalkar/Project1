@@ -5,4 +5,7 @@ class Topic < ActiveRecord::Base
 
   attr_accessible :description, :name
 
+  validates :name, length: { minimum: 5 }
+  validates :description, length: { minimum: 10}
+
 end

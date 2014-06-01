@@ -2,19 +2,19 @@
 
 
 
-<div class="col-md-8">
-     <%= form_for [ @topic, @article] do |f| %>
-     <div class="form-group">
-       <%= f.label :title %>
+  <div class="col-md-8">
+  <%= form_for [ @topic, @article] do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
        <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
-      </div>
-      <div class="media-body">
-        <%= f.label :body %>
-        <%= f.text_area :body, rows: 12, class: 'form-control', placeholder: "Enter wiki description" %>
-        <%= f.hidden_field :topic_id, :value => @topic_id %>
+     </div>
+       <%= f.label :body %>
+     <div class="form-group">
+       <%= f.text_area :body, class: 'form-control', rows: 12,  placeholder: "Enter wiki description" %>
+      <%= f.hidden_field :topic_id, :value => @topic_id %>
       </div>
      <div>
        <%= f.submit "Save", class: 'btn btn-primary' %>
       <% end %>
-    </div>
+    </div> 
 

@@ -92,6 +92,13 @@ gem 'doc_raptor'
 
 gem 'sendgrid'
 
+# MailForm for contact form email
+
+gem 'mail_form'
+
+# Letter Opener for development emails
+
+gem 'letter_opener', :group => :development
 
 
 

@@ -58,7 +58,7 @@ class ArticlesController < ApplicationController
           doc_raptor_send
         else
           redirect_to topic_article_url(@topic, @article, format: "html")
-          flash[:notice]="You need to buy that first"
+          flash[:notice]="Please click 'Pay with Card' to access download feature"
         end
       end
     end
