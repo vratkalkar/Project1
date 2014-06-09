@@ -13,7 +13,7 @@ def create
   if @contact_form.deliver
     redirect_to root_path, :notice => "Email has been sent."
   else
-   redirect_to root_path, :notice => "Email could not be sent."
+   redirect :back, :notice => "Email could not be sent. All fields required."
   end
  end
 end

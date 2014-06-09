@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '~> 4.0.0'
 
 # For production/Heroku
 
@@ -100,6 +100,13 @@ gem 'mail_form'
 
 gem 'letter_opener', :group => :development
 
+# Keyboard shortcuts for app
+
+gem 'mousetrap-rails'
+
+# Facebook OAuth
+
+gem 'omniauth-facebook'
 
 
 

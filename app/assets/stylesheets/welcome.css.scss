@@ -22,16 +22,16 @@ body {
 }
 
 #signup {
-  margin-left: -420px;
+  margin-left: 200px;
 }
 
 
-a,
+
 .btn,
 .btn-primary,
 .btn-large {
    text-align:center;
-   margin-right: -80px;
+   margin-left: -2px;
    margin-top: 40px;
 }
 
@@ -43,7 +43,8 @@ a,
 }
 
 h1 {
-  color:white;
+
+  background-color:#191919
 }
 
 h2 {
@@ -80,5 +81,9 @@ p {
 a {
   margin-right: 600px;
   margin-top: -400px;
+}
+
+.banner{
+  background-color: white;
 }
 

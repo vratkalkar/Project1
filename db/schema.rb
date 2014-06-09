@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531170051) do
+ActiveRecord::Schema.define(version: 20140609010238) do
 
   create_table "articles", force: true do |t|
     t.datetime "created_at"
@@ -84,6 +84,8 @@ ActiveRecord::Schema.define(version: 20140531170051) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
   end
 
 end

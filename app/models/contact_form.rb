@@ -5,6 +5,8 @@ class ContactForm < MailForm::Base
 
  attribute :message
 
+ validates :name, :email, :message, presence: true
+
 
  def headers
   {

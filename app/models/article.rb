@@ -3,7 +3,8 @@ class Article < ActiveRecord::Base
   belongs_to :topic
   has_many :comments
 
-  attr_accessible :body, :title
+  attr_accessible :body, :title, :id
+
 
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
@@ -11,6 +12,9 @@ class Article < ActiveRecord::Base
   def should_generate_new_friendly_id?
     new_record?
   end
+
+  
+
 
   validates :title, length: { minimum: 5 }
   validates :body, length: { minimum: 10}

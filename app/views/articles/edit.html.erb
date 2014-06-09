@@ -2,15 +2,14 @@
 <div class="col-md-8">
     <%= form_for :article do |f| %>
       <div class="form-group">
-        <%= f.label :title %></br>
-          <%= f.text_field :title, placeholder: "Enter title" %>
-      <div class="form-group">
-        <%= f.label :body %>
-        <%= f.text_area :body, rows: 8 , class: 'form-control', placeholder: "Enter description" %>
-        </div>
+      <%= f.submit "Update", class: 'btn btn-primary' %>
+      <%= f.label :title, class: 'title', id: 'label' %><br>
+       <%= f.text_field :title, class: 'title',placeholder: "Enter wiki title" %>
+     </div>
+       <%= f.label :body, class: 'body' %>
+     <div class="form-group">
+       <%= f.text_area :body, rows: 28, cols: 200,  placeholder: "Enter wiki description (You can use Markdown)" %>
+       <% end %>
       </div>
-          <%= f.submit "Save", class: 'btn btn-primary' %>
-    <% end %>
-
   </div>
 </div>

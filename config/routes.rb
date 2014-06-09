@@ -1,8 +1,12 @@
 Project1::Application.routes.draw do
 
   
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"}
   resources :users
+
+  devise_scope :user do
+    get 'sign_out', :to => 'devise/session#destroy'
+  end
 
   resources :topics do
    resources :articles
@@ -11,10 +15,8 @@ Project1::Application.routes.draw do
     resources :charges
    resources :comments
 
+
   resources :contact_forms
-
-  match '/topics/:topic_id/articles/:id/edit',  to: 'articles#show', via: :post
-
 
   root to: 'welcome#index'
 

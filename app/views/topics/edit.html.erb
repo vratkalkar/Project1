@@ -4,13 +4,17 @@
     <%= form_for @topic do |f| %>
       <div class="form-group">
         <%= f.label :name %></br>
-          <%= f.text_field :name, placeholder: "Enter topic name" %>
+          <%= f.text_field :name, class: 'form-control', placeholder: "Enter topic name" %>
       <div class="form-group">
+        <br>
+        <br>
         <%= f.label :description %>
         <%= f.text_area :description, rows: 8 , class: 'form-control', placeholder: "Enter topic description" %>
         </div>
       </div>
+      <div>
           <%= f.submit "Save", class: 'btn btn-primary' %>
     <% end %>
+   </div>
   </div>
 </div>

@@ -5,16 +5,13 @@
   <div class="col-md-8">
   <%= form_for [ @topic, @article] do |f| %>
     <div class="form-group">
-      <%= f.label :title %>
-       <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
+      <%= f.submit "Save", class: 'btn btn-primary' %>
+       <%= f.text_field :title, id: 'label', placeholder: "Enter wiki title here" %>
      </div>
-       <%= f.label :body %>
      <div class="form-group">
-       <%= f.text_area :body, class: 'form-control', rows: 12,  placeholder: "Enter wiki description" %>
+       <%= f.text_area :body, rows: 28, cols: 200,  placeholder: "Enter wiki text here (You can also use Markdown)" %>
       <%= f.hidden_field :topic_id, :value => @topic_id %>
       </div>
-     <div>
-       <%= f.submit "Save", class: 'btn btn-primary' %>
       <% end %>
     </div> 
 

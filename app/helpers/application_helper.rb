@@ -7,4 +7,5 @@ module ApplicationHelper
     (redcarpet.render text).html_safe
   end
 
+
 end

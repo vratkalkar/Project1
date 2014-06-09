@@ -3,9 +3,8 @@ class Topic < ActiveRecord::Base
   has_many :articles
   has_many :comments
 
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :topic_id
 
   validates :name, length: { minimum: 5 }
-  validates :description, length: { minimum: 10}
 
 end

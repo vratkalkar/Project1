@@ -19,14 +19,16 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find(params[:topic_id])
     @article = Article.friendly.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
+    @topic = Topic.friendly.find(params[:id])
+    @article = Article.friendly.find(params[:id])
 
     if @article.update_attributes(params[:article])
-      redirect_to @article, notice: 'Wiki was successfully updated.'
+      redirect_to topic_article_path, notice: 'Wiki was successfully updated.'
     else
       flash[:notice] = "Error saving wiki. Please try again"
       render :edit

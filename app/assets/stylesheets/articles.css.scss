@@ -2,13 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.well {
-  color:black;
-  margin-left: 580px;
+
+
+textarea{
+  width: 422%;
+  margin-top: 60px;
+  margin-left: -664px;
+  resize: none;
+}
+
+.btn,
+.btn-primary{
+  margin-top: 300px;
+}
+
+.title {
+  margin-left: -662px;
+}
+
+#label{
+  margin-left: -820px;
   margin-top: 20px;
 }
 
-.textarea{
-  margin-right:4arti00px;
-  width:60%;
+.body {
+  margin-left: -662px;
 }
+
+h1{
+  background-color:#191919;
+}
+
+h3 {
+  color:white;
+}
+
+.form-control {
+  margin-left: -400px;
+}
+

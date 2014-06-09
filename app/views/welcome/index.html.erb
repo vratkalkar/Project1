@@ -1,10 +1,12 @@
 
 
 <div class="jumbotron">
-<h1>Post/Rank</h1>
+
+<h1 class="banner">Post/Rank</h1>
 <h4>Post and collaborate on wiki's</h4>
 <p id="signup">
   <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-large' %>
+  <%= link_to "Sign in w/ Facebook", user_omniauth_authorize_path(:facebook) %>
 </p>
 </div>
 
@@ -15,10 +17,10 @@
   <%= link_to "Topics", topics_path, class: 'btn btn-warning' %>
 </br>
 </br>
+ <%= link_to "Contact", new_contact_form_path, class: 'btn btn-warning' %>
+</br>
+</br>
   <%= link_to "Sign Out", destroy_user_session_path,:method => :delete, class: 'btn btn-warning'%>
-</br>
-</br>
-  <%= link_to "Contact", new_contact_form_path, class: 'btn btn-warning' %>
 </div>
 
 <div class="row">

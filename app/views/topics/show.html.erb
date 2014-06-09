@@ -18,8 +18,9 @@
 
 <div class="topic-btn">
   <%= link_to "Edit Topic", edit_topic_path(@topic) %>
-  <%= link_to "New Post", new_topic_article_path(@topic) %>
+  <%= link_to "New Post", new_topic_article_path(@topic), data: { keybinding: 'n' } %>
   <%= link_to "View Topics", topics_path(@topic) %>
+  <%= link_to "Delete Topic", @topic, method: :delete, confirm: "Are you sure you'd like to delete this topic?" %>
 </div>
 
 
