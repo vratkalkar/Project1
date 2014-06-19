@@ -1,3 +1,4 @@
+require "omniauth"
 require "omniauth-facebook"
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
@@ -231,8 +232,8 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-   config.omniauth :facebook, ENV['APP_ID'], "APP_SECRET",
-       {:scope => 'email, offline_access', :client_options => {:ssl =>{:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+   config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"], :strategy_class => OmniAuth::Strategies::Facebook
+       {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

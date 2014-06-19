@@ -26,3 +26,4 @@ module Project1
     I18n.enforce_available_locales = false
   end
 end
+

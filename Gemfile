@@ -17,6 +17,10 @@ gem 'rails', '~> 4.0.0'
     gem 'sqlite3'
   end
 
+# bcrypt
+
+gem 'bcrypt'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -77,13 +81,11 @@ gem 'friendly_id'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
-# Will Paginate for pagination
-
-gem 'will_paginate', '~> 3.0'
 
 # Figaro for keys
   
   gem 'figaro'
+
 # DocRaptor for PDF
 
 gem 'doc_raptor'
@@ -107,6 +109,10 @@ gem 'mousetrap-rails'
 # Facebook OAuth
 
 gem 'omniauth-facebook'
+
+# Railties
+
+gem 'railties'
 
 
 
