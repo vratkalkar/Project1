@@ -108,6 +108,7 @@ gem 'mousetrap-rails'
 
 # Facebook OAuth
 
+gem 'omniauth'
 gem 'omniauth-facebook'
 
 # Railties
