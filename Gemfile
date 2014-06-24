@@ -115,6 +115,10 @@ gem 'omniauth-facebook'
 
 gem 'railties'
 
+# Certify SSL 
+
+gem 'certified'
+
 
 
 # Use ActiveModel has_secure_password
